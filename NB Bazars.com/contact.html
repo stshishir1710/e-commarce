@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSBazaar.com</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+<div class="nav">
+<div class="logo"><a href="#contact">NS.Bazaar</a></div>
+    <div class="nab-btn">
+        <ul>
+            <li><a href="index.html" class="home-btn">HOME</a></li>
+            <li><a href="shope.html">SHOP</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="about.html" class="about-btn">ABOUT</a></li>
+            <li><a href="contact.html" class="active">CONTACT</a></li>
+        </ul>
+    </div>
+    <div class="other-btn">
+        <img src="image/images-removebg-preview (1).png" id="cart" title="Cart">
+        <img src="image/bar-removebg-preview.png" id="bar" title="Bar">
+    </div>
+</div>
+
+<div class="noti">
+    <h1 class="n-h1">Thank You!</h1>
+    <p class="n-p">Your details has been Succesfully submited Thanks!!</p>
+    <button class="n-button">Ok</button>
+</div>
+<div class="contact" id="contact">
+    <div class="box">
+        <div class="msg-box">
+            <h1>We love to here from you</h1>
+            <input type="text" placeholder="Enter Your Name...." id="name-box"> <br>
+            <input type="email" placeholder="Enter Your Email...." id="email-box"> <br>
+            <textarea placeholder="Enter Your Massege..." id="mag-box"></textarea> <br>
+            <button id="mag-submit">Submit</button>
+        </div>
+
+        <div class="c-info">
+            <h2>visut one of our agency locations or contact us today.</h2>
+            <h3>Head Office</h3>
+            <ul>
+                <li>01719378475</li>
+                <li>stshishir01@gmail.com</li>
+                <li>Live location</li>
+                <li>Mirpur 10, Dhaka, Bangladesh</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="upper">
+        <div class="left">
+            <h1>Sign Up For NewsLetter</h1>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit <span>hic dolores.</span></p>
+    </div>
+        <div class="right">
+            <input type="email" placeholder="Your Email Address..." required> <button>Sign Up</button>
+        </div>
+        </div>
+    
+        <div class="dwn">
+            <div class="fot-1">
+                <h1>NS.Bazaar</h1>
+                <p>Address</p>
+                <p class="address">Address: Barsa manstar city lawra tala kana para</p>
+                <p class="address">Phone: +8801719378475, +8801836086665</p>
+                <p class="address">House: 10.00 8.00 man star city</p>
+            </div>
+    
+            <div class="fot-2">
+                <h1>About</h1>
+                <p class="about">About Us</p>
+                <p>Privacy Policy</p>
+                <p>Trams & Condition</p>
+                <p>Contrac Us</p>
+            </div>
+            
+            <div class="fot-3">
+                <h1>My Appertment</h1>
+                <p>Sign In</p>
+                <p>View Cont</p>
+                <p>Trams & Condition</p>
+                <p>help</p>
+            </div>
+            <div class="fot-4">
+                <h1>Install App</h1>
+                <p>Lorem ipsum dolor sit amet</p>
+                    <img src="image/IMG-20240820-WA0023.jpg" alt="" title="apple apps store">
+                    <img src="image/IMG-20240820-WA0024.jpg" alt="" title="google play store">
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <img src="image/IMG-20240820-WA0025.jpg" alt="" width="360px" id="bank" title="Payment Method">
+            </div>
+            
+        </div>
+    </footer>
+        <script>
+let name = document.querySelector("#name-box");
+let email = document.querySelector("#email-box");
+let massege = document.querySelector("#mag-box");
+let msgSubmit = document.querySelector("#mag-submit");
+
+let msgBox = document.querySelector(".msg-box");
+
+let notificationBox = document.querySelector(".noti");
+let okButton = document.querySelector(".n-button");
+
+let bar = document.querySelector("#bar");
+
+msgSubmit.addEventListener("click",(event)=>{
+    event.preventDefault();
+
+    if(name.value == "" || email.value == "" || massege.value == ""){
+        alert("please enter input");
+    }else{
+        notificationBox.classList.add("var");
+        msgSubmit.style.display = "none";
+        msgBox.classList.add("hideMsg")
+    }
+    var userInfo = {
+        name: name.value,
+        email : email.value,
+        maeeseg : massege.value
+    }
+    console.log(userInfo);
+    name.value = "";
+    email.value = "";
+    massege.value = "";
+
+    msgSubmit.classList.add("shopNow");
+    setTimeout(() => {
+        msgSubmit.classList.remove("shopNow");
+    }, 100);
+})
+
+okButton.addEventListener("click",()=>{
+    notificationBox.classList.remove("var");
+    msgSubmit.style.display = "block";
+    msgBox.classList.remove("hideMsg")
+})
+
+let navBox = document.querySelector(".nab-btn");
+bar.addEventListener("click",()=>{
+    navBox.classList.toggle("tr")
+})
+        </script>
+    </body>
+    </html>

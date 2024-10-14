@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    ---roboto: "Poppins", sans-serif;
+    ---popins: "Roboto", sans-serif;
+    ---nav-background: #f5f5f5;
+}
+.nav{
+    width: 100%;
+    height: 60px;
+    background-color:var(---nav-background) ;
+    box-shadow: 0px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 111111;
+}
+.nav .logo{
+    color: #0066ff;
+    font-family: var(---popins);
+    font-size: 40px;
+    font-weight: bolder;
+    font-variant: small-caps;
+    margin: 0px 0px 0px 100px;
+}
+.nav .nab-btn ul{
+    display: flex;
+    gap: 25px;
+    font-size: 17px;
+    font-family: var(---roboto);
+    font-weight: bold;
+    color: black;
+    transition: .1s all linear;
+}
+.nav .nab-btn ul li .active{
+    text-decoration: underline;
+    color: #0066ff;
+}
+.nav .other-btn{
+    margin-right: 50px;
+}
+.nav .other-btn img{
+    width: 35px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px;
+    margin-right: 5px;
+    transition: .1s all linear;
+}
+.nav .other-btn img:hover{
+    cursor: pointer;
+}
+.nav .other-btn #bar{
+    display: none;
+}
+.contact{
+    width: 100%;
+    padding: 30px 0px 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cfcccc;
+}
+.contact .box{
+    width: 90%;
+    height: 90vh;
+    padding: 15px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .box .msg-box{
+    width: 535px;
+    height: 95%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px;
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: .4s all linear;
+}
+
+.contact .box .hideMsg{
+    transform: scale(0.1);
+    pointer-events: none;
+    visibility: hidden;
+
+    transition: .4s all linear;
+}
+.contact .box .msg-box h1{
+    color: #0066ff;
+    text-align: center;
+    margin-top: 10px;
+    font-family: var(---popins);
+}
+.contact .box .msg-box input{
+    width: 500px;
+    height: 40px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+.contact .box .msg-box textarea{
+    width: 500px;
+    height: 200px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    resize: none;
+    font-size: 17px;
+}
+.contact .box .msg-box button{
+    width: 130px;
+    height: 40px;
+    background-color: #0066ff;
+    color: #ffffff;
+    color: #ffffff;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact .box .c-info{
+    width: 420px;
+    height: 400px;
+    background-color: #ffffff;
+    margin: 30px 0px 0px 20px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.contact .box .c-info h2{
+    color: #0066ff;
+    font-family: var(---roboto);
+    margin-top: 50px;
+}
+.contact .box .c-info h3{
+    color: #000000;
+    font-family: var(---popins);
+    margin-top: 40px;
+}
+.contact .box .c-info ul{
+    margin: 20px 0px 0px 20px;
+}
+.contact .box .c-info ul li{
+    list-style: circle;
+    font-family: var(---popins);
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+.shopNow{
+    transform: scale(1.1);
+    transition: .5s all linear;
+}
+
+.noti{
+    width: 350px;
+    height: 270px;
+    background-color: #ffffff;
+    position: absolute;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px;
+    margin: 170px 0px 0px 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(.0);
+    transition: .3s all linear;
+    visibility: hidden;
+    pointer-events: none;
+}
+.noti .n-h1{
+    font-family: var(---popins);
+    margin-top: -30px;
+    font-family: 30px;
+}
+.noti .n-p{
+    margin-top: 10px;
+    font-family: var(---popins);
+    font-size: 25px;
+    width: 250px;
+    text-align: center;
+}
+.noti button{
+    width: 200px;
+    height: 35px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.var{
+    transform: scale(1);
+    visibility: visible;
+    pointer-events: auto;
+    transition: .4s all linear;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+body{
+    background-color: rgb(182, 179, 179);
+}
+.nav{
+    width: 100%;
+    height: 60px;
+    z-index: 11111111;
+}
+.nav .nab-btn{
+    top: 60px;
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    background-color: #7e7c7c;
+    transform: translateX(-100%);
+    transition: .4s all linear;
+}
+.nav .tr{
+    transform: translateY(0%);  /* this is for showing bar on mobile screen  */
+}
+.nav .nab-btn ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.nav .nab-btn ul li{
+    width: 90%;
+    height: 40px;
+    background-color: rgb(181, 179, 179);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.nav .nab-btn ul li:hover{
+    transform: scale(1.01);
+}
+.nav .nab-btn ul li a{
+    position: absolute;
+    margin: 10px 0px 0px -30px;
+    color: black;
+    color: #ffffff;
+}
+.nav .other-btn{
+    margin-right: 20px;
+}
+.nav .logo{
+    margin: 0px 0px 0px 30px;
+    font-size: 27px;
+    color:  #00ff48;
+}
+.nav .other-btn #bar{
+    display: inline;
+}
+.nav .other-btn img{
+    width: 30px;
+}
+.nav .other-btn img:hover{
+    background-color: #00ff48;
+}
+.contact .box{
+    display: block;
+    margin: 0;
+    height: 100%;
+}
+.contact .box .msg-box{
+    width: 100%;
+    height: 530px;
+} 
+.contact .box .msg-box input, textarea{
+    width: 100%;
+}
+.contact .box .msg-box textarea{
+    width: 100%;
+}
+.contact .box .c-info{
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+}
+.noti{
+    position: absolute;
+   margin: 200px 0px 0px 20px;
+}
+}
+
+

@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    ---roboto: "Poppins", sans-serif;
+    ---popins: "Roboto", sans-serif;
+    ---nav-background: #f5f5f5;
+}
+.nav{
+    width: 100%;
+    height: 60px;
+    background-color:var(---nav-background) ;
+    box-shadow: 0px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 111111;
+}
+.nav .logo{
+    color: #0066ff;
+    font-family: var(---popins);
+    font-size: 40px;
+    font-weight: bolder;
+    font-variant: small-caps;
+    margin: 0px 0px 0px 100px;
+}
+.nav .nab-btn ul{
+    display: flex;
+    gap: 25px;
+    font-size: 17px;
+    font-family: var(---roboto);
+    font-weight: bold;
+    color: black;
+    transition: .1s all linear;
+}
+.nav .nab-btn ul li a:hover{
+    color: blue;
+    transform: scale(1.01);
+    text-decoration: underline;
+}
+.nav .nab-btn ul li .blog-btn{
+    text-decoration: underline;
+    color: #0066ff;
+}
+.nav .other-btn{
+    margin-right: 50px;
+}
+.nav .other-btn img{
+    width: 35px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px;
+    margin-right: 5px;
+    transition: .1s all linear;
+}
+.nav .other-btn img:hover{
+    background-color: #0066ff;
+    cursor: pointer;
+}
+.nav .other-btn #bar{
+    display: none;
+}
+.blog{
+    width: 100%;
+    height: 300px;
+    background-image: url(image/IMG-20240820-WA0032.jpg);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.blog h3{
+    color: #ffffff;
+    text-align: center;
+    font-weight: bolder;
+    font-family: var(---roboto);
+    font-size: 40px;
+}
+.blog p{
+    text-align: center;
+    font-family: var(---roboto);
+}
+.blog1{
+    width: 100%;
+    height: 360px;
+    display: flex;
+    align-items: center;
+}
+.blog1 .left{
+    width: 300px;
+    height: 300px;
+    margin-left: 50px;
+    padding: 10px;
+}
+.blog1 .left h1{
+    color: #7e7c7c;
+    font-family: var(---roboto);
+    margin-top: 20px;
+    font-size: 50px;
+}
+.blog1 .left img{
+    width: 350px;
+    height: 250px;
+    margin-top: -25px;
+    border-radius: 5px;
+}
+.blog1 .right{
+    width: 350px;
+    height: 240px;
+    margin: -50px 0px 0px 50px;
+    padding: 20px;
+}
+.blog1 .right h1{
+    color: #0066ff;
+    font-family: var(---roboto);
+    font-size: 30px;
+    margin-top: 50px;
+}
+.blog1 .right p{
+    text-align: justify;
+    margin-top: 20px;
+    font-family: var(---roboto);
+}
+.blog1 .right h2{
+    font-family: var(---popins);
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+body{
+    background-color: rgb(182, 179, 179);
+}
+.nav{
+    width: 100%;
+    height: 60px;
+    z-index: 11111111;
+}
+.nav .nab-btn{
+    top: 60px;
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    background-color: #7e7c7c;
+    transform: translateX(-100%);
+    transition: .4s all linear;
+}
+.nav .tr{
+    transform: translateY(0%);  /* this is for showing bar on mobile screen  */
+}
+.nav .nab-btn ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.nav .nab-btn ul li{
+    width: 90%;
+    height: 40px;
+    background-color: rgb(181, 179, 179);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.nav .nab-btn ul li:hover{
+    transform: scale(1.01);
+}
+.nav .nab-btn ul li a{
+    position: absolute;
+    margin: 10px 0px 0px -30px;
+    color: black;
+    color: #ffffff;
+}
+.nav .other-btn{
+    margin-right: 20px;
+}
+.nav .logo{
+    margin: 0px 0px 0px 30px;
+    font-size: 27px;
+    color:  #00ff48;
+}
+.nav .other-btn #bar{
+    display: inline;
+}
+.nav .other-btn img{
+    width: 30px;
+}
+.nav .other-btn img:hover{
+    background-color: #00ff48;
+}
+.blog1{
+    display: none;
+}
+}
